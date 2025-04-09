@@ -1,7 +1,6 @@
 .git
 .github
 .gitmodules
-public
 themes/*/.git
 themes/*/exampleSite
 node_modules
