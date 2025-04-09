@@ -25,7 +25,7 @@ jobs:
       - name: Build and tag image
         run: |
           COMMIT_SHA=$(echo $GITHUB_SHA | cut -c1-7)
-          IMAGE="${{ secrets.HARBOR_REGISTRY_URL }}/hugo/${{ github.repository }}:$COMMIT_SHA"
+          IMAGE="${{ secrets.HARBOR_REGISTRY_URL }}/hugo/blog:$COMMIT_SHA"
           docker build -t $IMAGE -f ./Dockerfile .
 
       - name: Push image to Harbor
