@@ -18,17 +18,17 @@ jobs:
 
       - name: Log in to Harbor
         run: |
-          echo "${{ secrets.HARBOR_CREDENTIALS }}" | base64 --decode | \
-          docker login -u $(echo "${{ secrets.HARBOR_CREDENTIALS }}" | base64 --decode | cut -d ':' -f1) \
-          --password-stdin ${{ secrets.HARBOR_REGISTRY_URL }}
+          echo "${{ secrets.HARBOR_KEY }}" | docker login \
+            -u "${{ secrets.HARBOR_USER }}" \
+            --password-stdin "${{ secrets.HARBOR_REGISTRY_URL }}"
 
       - name: Build and tag image
         run: |
           COMMIT_SHA=$(echo $GITHUB_SHA | cut -c1-7)
-          IMAGE=${{ secrets.HARBOR_REGISTRY_URL }}/hugo/${{ github.repository }}:$COMMIT_SHA
+          IMAGE="${{ secrets.HARBOR_REGISTRY_URL }}/hugo/${{ github.repository }}:$COMMIT_SHA"
           docker build -t $IMAGE -f ./Dockerfile .
 
       - name: Push image to Harbor
         run: |
           COMMIT_SHA=$(echo $GITHUB_SHA | cut -c1-7)
-          docker push ${{ secrets.HARBOR_REGISTRY_URL }}/hugo/${{ github.repository }}:$COMMIT_SHA
+          docker push "${{ secrets.HARBOR_REGISTRY_URL }}/hugo/${{ github.repository }}:$COMMIT_SHA"
