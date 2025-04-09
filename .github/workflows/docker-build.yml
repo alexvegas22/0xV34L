@@ -8,4 +8,4 @@
     docker build -t ${{ secrets.HARBOR_REGISTRY_URL }}/project-name/${{ github.repository }}:$COMMIT_SHA -f path/to/Dockerfile .    
 
 - name: Push image to Harbor
-  run: docker push ${{ secrets.HARBOR_REGISTRY_URL }}/project-name/${{ github.repository }}:$COMMIT_SHA
+  run: docker push ${{ secrets.HARBOR_REGISTRY_URL }}/hugo/${{ github.repository }}:$COMMIT_SHA
