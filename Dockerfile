@@ -1,4 +1,4 @@
-FROM klakegg/hugo:0.145.0-ext-alpine AS build
+FROM klakegg/hugo:ext-alpine AS build
 WORKDIR /src
 COPY . .
 RUN hugo --minify
