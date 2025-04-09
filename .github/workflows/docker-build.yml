@@ -31,4 +31,4 @@ jobs:
       - name: Push image to Harbor
         run: |
           COMMIT_SHA=$(echo $GITHUB_SHA | cut -c1-7)
-          docker push "${{ secrets.HARBOR_REGISTRY_URL }}/hugo/${{ github.repository }}:$COMMIT_SHA"
+          docker push "${{ secrets.HARBOR_REGISTRY_URL }}/hugo/blog:$COMMIT_SHA"
