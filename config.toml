@@ -1,2 +1,3 @@
 baseURL = "https://blog.v34l.com"
 languageCode = "en-us"
+themes = "v34l"
