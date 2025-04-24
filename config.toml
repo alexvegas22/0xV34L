@@ -1,2 +1,3 @@
-baseURL = "/"
-languageCode = "en-us"
+baseURL = '/'
+languageCode = 'en-us'
+theme = 'v34l'
