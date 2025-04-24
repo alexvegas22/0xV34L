@@ -1,4 +1,19 @@
-#+TITLE: Hello
+#+TITLE: Hello World
 #+DRAFT: true
-* Header
-* Yay
+#+AUTHOR: V34L
+#+DATE: 2023-11-15
+#+HUGO_TAGS: linux
+
+For this first post, I'd like to introduce myself and provide some context into my background.
+
+* Using Linux
+- 2017
+My Linux journey started in the middle of highschool, when I first started using Tails as a way to be more private while browsing with Tor. As a first exposure to Linux, it was pretty positive and I didn't experience any friction trying to do the things I wanted to do.
+
+I, however, had no intention of daily driving a Linux distro since I was worried I wouldn't be able to play my favourite online games, so a full install would have to wait a couple of years.
+
+- 2020
+It wasnt until 2020 that I installed my first /real/ distro : *Ubuntu*.
+After the family 2009 iMac started slowing down significantly, I decided to boot Ubuntu on it to try to extend it's lifespan. This is also when I started learning about Linux at school, which further motivated me to start using it at home.
+
+I remember having a lot of trouble installing packages, being confused about why sometimes I had to install via the terminal, and other times by downloading app images from the web directly.

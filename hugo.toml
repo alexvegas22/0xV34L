@@ -1,4 +1,4 @@
-baseURL = 'https://blog.v34l.com'
+baseURL = '/'
 languageCode = 'en-us'
 title = '0xV34L'
-themes = "v34l"
+theme = 'v34l'

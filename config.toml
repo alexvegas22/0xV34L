@@ -1,3 +1,2 @@
-baseURL = "https://blog.v34l.com"
+baseURL = "/"
 languageCode = "en-us"
-themes = "v34l"
