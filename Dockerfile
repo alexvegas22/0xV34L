@@ -1,17 +1,12 @@
-FROM razonyang/hugo:latest AS build
+FROM floryn90/hugo:0.136.5 AS build
 
 WORKDIR /src
+
 COPY . .
 
 RUN hugo
 
-RUN hugo \
-    --minify \
-    --baseURL "/" \
-    --cleanDestinationDir
+FROM nginx:1.21.6-alpine
+COPY --from=build /src/public/ /usr/share/nginx/html
 
-RUN ls -la /src/public
-
-FROM nginx:alpine
-COPY --from=build /src/public /usr/share/nginx/html
-RUN chmod -R 755 /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
