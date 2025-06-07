@@ -17,8 +17,3 @@ title = 'v34l'
     name = 'Tags'
     pageRef = '/tags'
     weight = 30
-
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = '0.146.0'
