@@ -1,5 +1,6 @@
-baseURL = '/'
-defaultContentLanguage = "en"
+baseURL = 'https://blog.v34l.com'
+defaultContentLanguage = "fr-ca"
+theme = 'pastelNeon'
 
 [languages.en]
   languageCode = "en-us"
