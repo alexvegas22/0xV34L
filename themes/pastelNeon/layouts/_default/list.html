@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
   <h1>{{ .Title }}</h1>
   {{ .Content }}
   {{ range .Pages }}
@@ -6,3 +8,4 @@
     {{ .Summary }}
   {{ end }}
 {{ end }}
+{{ partial "footer.html" . }}
