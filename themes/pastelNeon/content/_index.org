@@ -1,5 +1,0 @@
-#+TITLE: 'Home'
-#+DRAFT: false
-
-* Welcome to my home page
-You can find various links below:
