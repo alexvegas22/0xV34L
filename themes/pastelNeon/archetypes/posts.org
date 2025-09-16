@@ -1,0 +1,11 @@
+#+TITLE: {{ replace .TranslationBaseName "-" " " | title }}
+#+DATE: {{ .Date }}
+#+AUTHOR: ""
+#+AUTHOR_TWITTER: ""
+#+COVER: ""
+#+TAGS: ("", "")
+#+KEYWORDS: ("", "")
+#+DESCRIPTION: ""
+#+SHOW_FULL_CONTENT: false
+#+READING_TIME: false
+#+HIDE_COMMENTS: false

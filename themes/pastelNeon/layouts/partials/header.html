@@ -1,11 +1,11 @@
-<header class="site-header">
-  <div id="nav-border" class="container header-container rounded-container">
+<header>
+  <div id="nav-border" class="header-container rounded-container">
     <div class="header-content">
       <div>
         <h1 class="site-title">{{ site.Title }}</h1>
       </div>
       <nav id="nav" class="nav-menu">
-        {{ range .Site.Menus.main }}
+        {{ range .Site.Data.Menus.Main }}
         <a class="nav-link" href="{{ .URL }}">
           {{ $text := print .Name | safeHTML }}
           {{ $text }}

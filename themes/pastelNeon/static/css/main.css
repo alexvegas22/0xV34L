@@ -1,21 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Syne%20Mono:700|Syne%20Mono:400');
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+:root {
+    --font-size: 1rem;
+    --line-height: 1.54em;
+    --radius: 5px;
+    --border: 3px;
+}
 @media (prefers-color-scheme: light) {
     :root {
 	--text: #16091b;
 	--background: #ede4f6;
-	--primary: #54296b;
-	--secondary: #d289c1;
+	--foreground: #54296b;
 	--accent: #aa417c;
     }
 }
+
 @media (prefers-color-scheme: dark) {
     :root {
-	--text: #f1e4f6;
-	--background: #12091b;
-	--primary: #bf94d6;
-	--secondary: #762d65;
-	--accent: #be5591;
+	--background: #1d2021;
+	--foreground: #ebdbb2;
+	--accent: #aa5577;
+	--text: #ebdbb2;
     }
 }
 
@@ -23,73 +28,94 @@ body {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    font-family: 'Syne';
-    font-weight: 400;
+    font-family: 'Syne Mono';
+    caret-color: var(--text);
+    caret-shape : block;
+    min-height: 100vh;
+    transition:
+	color 0.5s,
+	background-color 0.5s;
+    margin : auto;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    background-color: var(--background);
+    color: var(--foreground);
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    text-size-adjust: 100%;
 }
 
-p {
-    font-size: 18px;
+main {
+    margin: 0 48px 0 48px;
+    text-align:justify;
+    text-justify: inter-word;
 }
 
-h1, h2, h3, h4, h5, button, input {
+footer {
+    width: 100%;
+    border-top: var(--border) solid var(--accent);
+    padding: 8px 16px 8px 16px;
+    text-align: center;
+    align-self: center;
+    justify-content: end;
+    margin-top: auto;
+}
+
+
+h1 {
+  font-size: calc(var(--font-size) * 1.45);
+}
+
+h2 {
+  font-size: calc(var(--font-size) * 1.35);
+}
+
+h3 {
+  font-size: calc(var(--font-size) * 1.15);
+}
+
+h4,
+h5,
+h6 {
+  font-size: calc(var(--font-size) * 1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+img,
+figure,
+video,
+button,
+input,
+table {
     font-family: 'Syne Mono';
     font-weight: 700;
 }
 
-h1 {font-size: 32px;}
+time { font-size: calc(var(--font-size) * 1.2);}
 
-h2 {
-    font-size: 24px;
-    margin-top: 16px;
+strong {
+    color: var(--accent);
+    font-weight: bold;
 }
 
-h3 {font-size: 20px;}
-
-h4 {font-size: 18px;}
-
-h5 {font-size: 16px;}
-
-small {font-size: 14px;}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    font-weight: normal;
-}
-
-body {
-    caret-color: var(--text);
-    caret-shape : block;
-    min-height: 100vh;
-    color: var(--text);
-    background:var(--background);
-    transition:
-	color 0.5s,
-	background-color 0.5s;
-    line-height: 1.6;
-    margin : auto;
-}
-
-.rounded-container{
-    border-radius: 5px;
-    border: 3px solid var(--primary);
-    margin: 1rem;
-
-    padding : 1rem;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
-}
-
-button{
-    border : 3px dashed var(--primary);
+button {
+    border : var(--border) dashed var(--accent);
     outline : none;
     color: var(--text);
     padding : 10px;
-    border-radius : 5px;
+    border-radius : var(--radius);
     transition:
 	color 0.5s,
-	filter 0.5s;
+	background 0.5s;
     background: transparent;
     cursor: pointer;
 }
@@ -99,8 +125,12 @@ a:hover,
 button:focus,
 a:focus,
 input:focus{
-    background : var(--secondary);
+    background : var(--accent);
     outline : none;
+    color: var(--background);
+    transition:
+	color 0.5s,
+	background 0.5s;
 }
 
 a{
@@ -110,35 +140,43 @@ a{
 select{
     width: 100%;
     padding: 8px;
-    margin-bottom: 10px; /* Adjust the spacing if needed */
-    display: block; /* Display the select input on smaller screens */
-
-    /* Styling with custom colors */
-    background-color: var(--primary);
+    margin-bottom: 10px;
+    display: block;
+    background-color: var(--foreground);
     color: var(--text);
     border: 1px solid var(--text);
-    border-radius: 5px;
+    border-radius: var(--radius);
 }
 
 input {
     border: none;
-    border-bottom: 2px dashed var(--primary);
+    border-bottom: 2px dashed var(--foreground);
     color: var(--text);
     outline: none;
     box-shadow: none;
     background-color: transparent;
-    caret: blue block;
-
+    caret: var(--accent) block;
 }
+
+/* Components */
+.rounded-container{
+    border-radius: var(--radius);
+    border: var(--border) solid var(--accent);
+    margin: 1rem;
+    padding : 1rem;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+}
+
 .nav{
     height : fit-content;
 }
+
 @media(max-width:768px){
     .rounded-container{
 	border-radius: 0px;
 	border: none;
-	margin: 0;
 	box-shadow: none;
+	border-bottom: var(--border) solid var(--accent);
     }
 
     h1{
@@ -146,26 +184,25 @@ input {
     }
 
     p{
-	font-size:0.8rem
+	font-size:1rem
     }
 
     router-link{
 	font-size:1rem;
+	border-bottom: var(--border) solid var(--accent);
     }
 
     nav{
-	background: var(--primary);
-	color:var(--secondary);
+	background: var(--foreground);
+	color:var(--accent);
 	padding : 0;
+	border-bottom: var(--border) solid var(--accent);
     }
-}
-.site-header {
-    width: full;
-    height: 100px;
 }
 
 .header-container {
-    height: 100%;
+    height: fit-content;
+    width: fit-parent;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -179,34 +216,9 @@ input {
     padding: 0 2rem;
 }
 
-.site-title {
-    color: white;
-    margin: 0;
-}
-
 .nav-menu {
     display: flex;
     gap: 1.5rem;
-}
-
-.nav-link {
-    color: white;
-}
-
-main {
-    margin: 0 48px 0 48px;
-    text-align:justify;
-    text-justify: inter-word;
-}
-
-footer {
-    width: 100%;
-    background: var(--secondary);
-    padding: 8px 16px 8px 16px;
-    text-align: center;
-    align-self: center;
-    justify-content: end;
-    margin-top: auto;
 }
 
 .postTitle {
@@ -214,6 +226,5 @@ footer {
     flex-align: row;
     align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 32px;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--foreground);
 }

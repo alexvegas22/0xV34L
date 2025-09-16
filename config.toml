@@ -1,3 +1,8 @@
 baseURL = 'https://blog.v34l.com'
 defaultContentLanguage = "fr-ca"
 theme = 'pastelNeon'
+title = 'V34L'
+[params]
+    showMenuItems = 2
+[params.mastodon]
+    url = "https://infosec.exchange/@v34l"
