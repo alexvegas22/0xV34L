@@ -1,12 +1,12 @@
 {{ define "main" }}
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
   {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-     <a href="{{ .RelPermalink }}">[Read More]</a>
+  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+  {{ .Summary }}
+  <a href="{{ .RelPermalink }}">[Read More]</a>
   {{ end }}
 {{ end }}
 {{ partial "footer.html" . }}

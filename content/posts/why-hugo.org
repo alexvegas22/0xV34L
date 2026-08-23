@@ -1,0 +1,12 @@
+#+TITLE: Why Hugo
+#+DRAFT: false
+#+AUTHOR: V34L
+#+DATE: 2026-08-23
+#+HUGO_TAGS: linux, emacs
+
+* Why Hugo?
+
+As a "DevOps" person, I'm usually surrounded by go applications, and as an Emacs
+enthusiast, the org file support made the choice to use Hugo pretty easy.
+
+I've used Hugo many times in the past, to make a nd update sites for multiple student clubs/associations, including my web-hosting student club.
