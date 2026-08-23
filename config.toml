@@ -1,8 +1,30 @@
 baseURL = 'https://blog.v34l.com'
 defaultContentLanguage = "fr-ca"
-theme = 'pastelNeon'
 title = 'V34L'
+
+[menu]
+    [[menu.main]]
+        identifier = "home"
+     	name = "Home"
+      	url = "/"
+	weight = 1
+    [[menu.main]]
+        identifier = "posts"
+     	name = "Posts"
+      	url = "/posts/"
+	weight = 2
+    [[menu.main]]
+        identifier = "projects"
+    	name = "Projects"
+	url = "/projects/"
+	weight = 3
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+      	url = "/about/"
+	weight = 4
+
 [params]
     showMenuItems = 2
-[params.mastodon]
-    url = "https://infosec.exchange/@v34l"
+    [params.mastodon]
+	url = "https://infosec.exchange/@v34l"

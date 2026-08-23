@@ -1,0 +1,22 @@
+#+TITLE: whoami
+#+DRAFT: true
+#+AUTHOR: V34L
+#+DATE: 2026-08-23
+#+HUGO_TAGS: linux, emacs
+
+* About me
+|------------------+----------------|
+| Name             | Veal           |
+| Age              | In my 20's     |
+| Editor           | Emacs          |
+| Languages I like | Go, Typescript |
+| Linux Distro     | NixOS          |
+| Window Manager   | Niri           |
+| I like           | Cats :3        |
+|------------------+----------------|
+
+I've decided to use Hugo to make my site since it supports org files, and since I've used it a few times before in sites for other people/associations.
+
+As a university student in software engineering, I spend most of my time working on hosting infrastructure for student associations and clubs, hosting all of their sites and applications on multiple kubernetes clusters.
+
+I've been a Linux user for over a decade, but I've only started daily driving it 4 years ago.
